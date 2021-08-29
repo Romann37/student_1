@@ -24,10 +24,11 @@ class Student:
     def add_courses(self, course_name):
         self.finished_courses.append(course_name)
 class Lecturer(Mentor):
+    pass
            
     
 class Reviewer(Mentor):
-           
+    pass         
     
 
 
