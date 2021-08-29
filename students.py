@@ -5,6 +5,13 @@ class Mentor:
         self.courses_attached = []
 
 class Student:
+    def __str__(self, some_lecturer):
+        return '''
+Имя: Ruoy
+Фамилия: Eman
+Средняя оценка за домашние задания: 9.9
+Курсы в процессе изучения: Python, Git
+Завершенные курсы: Введение в программирование'''
     def __init__(self, name, surname, gender):
         self.name = name
         self.surname = surname
@@ -21,12 +28,25 @@ class Student:
                 lecturer.grades[course] += [grade]
             else:
                 lecturer.grades[course] = [grade]
+    def student_chart(self, grade):
+        self.grade = grade
 class Lecturer(Mentor):
+    def __str__(self, some_lecturer):
+        return '''
+Имя: Some
+Фамилия: Buddy
+Средняя оценка за лекции: 9.9'''
     def __init__(self, grades):
         self.grades = {}
-           
+    def lecturer_chart(self, grade):
+        self.grade = grade       
     
 class Reviewer(Mentor):
+    def __str__(self, some_reviewer):
+        return '''
+Имя: Some
+Фамилия: Buddy'''
+          
     def rate_hw(self, student, course, grade):
         if isinstance(student, Student) and course in self.courses_attached and course in student.courses_in_progress:
             if course in student.grades:
