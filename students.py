@@ -22,6 +22,8 @@ class Student:
             else:
                 lecturer.grades[course] = [grade]
 class Lecturer(Mentor):
+    def __init__(self, grades):
+        self.grades = {}
            
     
 class Reviewer(Mentor):
