@@ -56,7 +56,10 @@ class Reviewer(Mentor):
         else:
             return 'Ошибка'   
     
-
+man1 = Student('Nill', 'Braun', 8)
+man2 = Student('Rick', 'Soul', 10)
+man3 = Reviewer('Bill', 9)
+man4 = Reviewer('Jonn', 10)
 
  
 best_student = Student('Ruoy', 'Eman', 'your_gender')
